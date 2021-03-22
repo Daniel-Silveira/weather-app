@@ -24,7 +24,6 @@ const Navigation = () => {
     }
     let location = await Location.getCurrentPositionAsync({});
     dispatch(requestCurrent(location.coords));
-    dispatch(requestList(location.coords));
   };
 
   React.useEffect(() => {

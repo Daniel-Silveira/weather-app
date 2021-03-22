@@ -22,7 +22,7 @@ const Header = ({ current: { name } }) => {
               };
               dispatch(requestCurrent(data));
               dispatch(requestList(data));
-              return setSearch(false)
+              return setSearch(false);
             }}
           />
           <Styled.Button onPress={() => setSearch(false)}>

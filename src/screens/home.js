@@ -11,7 +11,6 @@ const HomeScreen = () => {
     weather: { current, list, loading },
   } = useSelector((value) => value);
 
-  console.log(loading);
   return (
     <Styled.Gradient colors={["#70e9e0", "#6aa5df"]}>
       {loading ? (

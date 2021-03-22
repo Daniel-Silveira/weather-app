@@ -1,6 +1,7 @@
 import { createLogic } from "redux-logic";
 import {
   requestCurrentSuccess,
+  requestList,
   requestListSuccess,
   REQUEST_CURRENT,
   REQUEST_LIST,
@@ -23,6 +24,8 @@ export const handleRequestCurrentWeather = () => {
       done
     ) {
       dispatch(setLoading(true));
+      dispatch(requestList(coords));
+
       http
         .get(
           `/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${apiKey}&units=metric`
